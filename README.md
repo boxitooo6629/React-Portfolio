@@ -7,6 +7,7 @@ This is Portfolio created with React.js one of the most modern Javascript librar
 
 # Visuals
 
+![Screenshot_43](https://user-images.githubusercontent.com/68082613/224563770-40896084-6db4-4206-bdc8-5a874cb4dea2.png)
 
 # Installation
 To install dependencies run this bash command in the root of the project.
