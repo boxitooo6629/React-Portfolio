@@ -7,13 +7,20 @@ This is Portfolio created with React.js one of the most modern Javascript librar
 
 # Visuals
 
-# Installation
 
-Installion is not applicable simply log into the website or check my repository in GitHub https://github.com/boxitooo6629/ !
+# Installation
+To install dependencies run this bash command in the root of the project.
+
+```bash 
+npm install
+```
 
 # Usage 
+To run development server with hot reloading run the command below.
 
-jest (https://www.npmjs.com/package/jest) Node.js (https://nodejs.org/en/) 
+```bash 
+npm run start
+```
 
 # Support
 
