@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "id": "notifier",
+            "name": "World of Warcraft Notifier",
+            "desc": "Notifies you when a person is looking for a group you are also interested in.",
+            "long_desc": "/notifier.md",
+            "presentation": "",
+            "image": "/images/notifier.png",
+            "github": "https://github.com/boxitooo6629/World-of-Warcraft-Notifier"
+        },
+        {
+            "id": "wine-food-pairing",
+            "name": "Wine and Food Pairing",
+            "desc": "Pair your favorate food or wine to each other.",
+            "long_desc": "",
+            "presentation": "",
+            "image": "/images/wine-dish-pair.jpg",
+            "github": "https://github.com/boxitooo6629/Wine-Food-Pairing-App"
+        }
+    ]
+}

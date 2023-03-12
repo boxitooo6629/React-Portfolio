@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+$varela-font: 'Varela Round', sans-serif;
+
+// Variables
+$golden-yellow: #F2CD5C;
+$tangerine: #F2921D;
+$deep-magenta: #A61F69;
+$dark-purple: #400E32;
+
+$body-bg: $dark-purple;
+$body-color: #FFFFFF;
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Apply the Sono font family to header tags
+h1, h2, h3, h4, h5, h6 {
+  font-family: $varela-font;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $tangerine;
+}
+
+main {
+    padding: $spacer * 2;
+}
+
+.header-container {
+    // background-color: $deep-magenta;
+    display: flex;
+    padding: $spacer * 2;
+    justify-content: space-between;
+}
+
+.header-name a {
+    // background-color: $golden-yellow;
+    color: $golden-yellow;
+    font-family: $varela-font;
+    // padding: $margin $margin * 2;
+    display: inline-block;
+    font-size: 2em;
+    text-decoration: none;
+    transition: transform 300ms;
+    &:hover {
+        transition: transform 300ms;
+        transform: translateY(-.2em);
+    }
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+    // margin-right: $margin;
+    a {
+        color: mix($tangerine, $golden-yellow, 80%);
+        text-decoration: none;
+        font-family: $varela-font;
+        display: inline-block;
+        margin: $spacer * .5;
+        // padding: $spacer * .3;
+        transition: color 400ms;
+        &.active {
+            text-shadow: 1px 2px 3px $deep-magenta;
+            color: $golden-yellow;
+        }
+        &:hover {
+            color: $golden-yellow;
+            text-decoration: underline;
+            text-decoration-style:wavy;
+            text-decoration-color: $deep-magenta;
+        }
+    }
+}
+
+.home-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .introduction {
+        font-family: $varela-font;
+        font-size: $font-size-base * 3;
+        color: $deep-magenta;
+        margin-right: $spacer;
+        .emphasis {
+            color: $tangerine;
+            font-size: $font-size-base * 5;
+        }
+    }
+    .avatar {
+        border-width: 20px;
+        border-style:double;
+        border-color: $deep-magenta;
+        border-radius: 50%;
+        width: 400px;
+        transition: transform 500ms;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, .2);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.projects-page {
+    display: flex;
+    flex-direction: row;
+    &-list {
+        margin-right: $spacer * 2;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        li {
+            font-family: $varela-font;
+            a {
+                padding: $spacer * .5;
+                display: block;
+                text-decoration: none;
+                &.active {
+                    color: $golden-yellow;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-style:wavy;
+                    text-decoration-color: $deep-magenta;
+                }
+            }
+        }
+    }
+    .project-section {
+        background-color: #FFF;
+        // padding: $spacer;
+        border-radius: 15px;
+        border: 2px solid #FFF;
+        color: $dark-purple;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: hidden;
+        .project-section-content {
+            padding: $spacer;
+            .project-section-title {
+                display: flex;
+                justify-content: space-between;
+
+            }
+            .project-section-icon {
+                color: #000;
+            }
+        }
+        .project-section-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+            margin-bottom: $spacer;
+        }
+    }
+}
+
+.contacts-page-list {
+    list-style: none;
+    padding: 0;
+    svg {
+        margin-right: $spacer;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .header-container {
+        flex-direction: column;
+    }
+    .projects-page {
+        flex-direction: column;
+        .project-section-image {
+            height: 50vh;
+        }
+    }
+    .home-page {
+        .avatar {
+            width: 70vw;
+        }
+    }
+}
