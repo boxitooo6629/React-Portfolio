@@ -1,27 +1,25 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navigation() {
     const location = useLocation();
 
     return (
         <div className="header-navigation">
-            <a
+            <Link
                 className={
                     location.pathname.startsWith("/projects") ? "active" : ""
                 }
-                href={`/projects`}
+                to={"/projects"}
             >
                 Projects
-            </a>
-            <a
+            </Link>
+            <Link
                 className={
                     location.pathname.startsWith("/contacts") ? "active" : ""
                 }
-                href={`/contacts`}
-            >
-                Contacts
-            </a>
+                to={"/contacts"}
+            >Contacts</Link>
         </div>
     );
 }

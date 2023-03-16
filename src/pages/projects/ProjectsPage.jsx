@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import {
+    Link,
     Outlet,
     useLoaderData,
     useNavigate,
@@ -22,12 +23,12 @@ function ProjectsPage() {
             <ul className="projects-page-list">
                 {data.projects.map(({ id, name }) => (
                     <li key={id}>
-                        <a
+                        <Link
+                            to={`/projects/${id}`}
                             className={params.name === id ? "active" : ""}
-                            href={`/projects/${id}`}
                         >
                             {name}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
